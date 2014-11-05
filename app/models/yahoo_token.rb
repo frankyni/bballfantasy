@@ -7,6 +7,6 @@ class YahooToken < ConsumerToken
 	}
 
 	def self.consumer(options={})
-		@consumer ||= OAuth::Consumer.new(credentials[:key], credentials[:secret], TEST_SETTINGS.merge(options))
+		@consumer ||= OAuth::Consumer.new(credentials[:key], credentials[:secret], YAHOO_SETTINGS.merge(options))
 	end
 end

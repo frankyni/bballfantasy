@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one  :test, :class_name=>"TestToken", :dependent=>:destroy
+  has_one  :yahoo, :class_name=>"YahooToken", :dependent=>:destroy
 end
