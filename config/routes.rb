@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  resources :oauth_consumers do
+    member do
+      get :callback
+      get :callback2
+      match 'client/*endpoint' => 'oauth_consumers#client', :via => [:get, :post, :put, :delete]
+    end
+  end
+  get 'welcome/index'
+
+  devise_for :users
+  root to: 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
