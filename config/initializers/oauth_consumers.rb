@@ -3,7 +3,12 @@
 #
 # eg. :twitter => TwitterToken, :hour_feed => HourFeedToken etc.
 #
-# OAUTH_CREDENTIALS={
+OAUTH_CREDENTIALS={
+
+	:yahoo =>{
+		:key => ENV['YAHOO_CONSUMER_KEY'],
+		:secret => ENV['YAHOO_CONSUMER_SECRET'],
+	}
 #   :twitter=>{
 #     :key=>"",
 #     :secret=>"",
@@ -60,7 +65,7 @@
 #       :site=>"http://nubux.heroku.com"
 #     }
 #   }
-# }
+}
 #
 OAUTH_CREDENTIALS={
 } unless defined? OAUTH_CREDENTIALS
